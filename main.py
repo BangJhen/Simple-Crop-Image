@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import copy
 
-file_name = "digital_camera_photo-1080x675.jpg"
+file_name = "digital_camera_photo.jpg"
 img = cv2.imread(file_name)
 window = "Kanvas"
 x_awal, y_awal = 0, 0
