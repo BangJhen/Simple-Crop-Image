@@ -3,7 +3,8 @@ import pandas as pd
 import numpy as np
 import copy
 
-img = cv2.imread("./digital_camera_photo-1080x675.jpg")
+file_name = "digital_camera_photo-1080x675.jpg"
+img = cv2.imread(file_name)
 window = "Kanvas"
 x_awal, y_awal = 0, 0
 mouse_active = False
@@ -57,6 +58,8 @@ while run:
         img = cv2.imread("./digital_camera_photo-1080x675.jpg")
         new_img = copy.deepcopy(img)
         x_awal, y_awal = 0, 0
+    if cv2.waitKey(10) == ord("s"):
+        cv2.imwrite(f"Edited {file_name}", new_img)
     cv2.imshow(window,new_img)
     cv2.imshow(trackbar_window, resize_img)
         
